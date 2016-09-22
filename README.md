@@ -22,11 +22,11 @@ This is intended to make column/rectangle selections and operations more friendl
 
 ## Screenshots
 
-![equalized lines](images/screenshot1.png)
+![equalized lines](https://cdn.rawgit.com/mycelo1/vsc-equalize/master/images/screenshot1.png)
 
 > Some lines have been 'equalized' and a perfectly square column of text could be selected among them.
 
-![equalized lines](images/screenshot2.png)
+![equalized lines](https://cdn.rawgit.com/mycelo1/vsc-equalize/master/images/screenshot2.png)
 
 > A column of text was copied alongside another one mantaining the original alignment thanks to equalized lines.
 
@@ -38,8 +38,25 @@ By default the command **'extension.equalize'** is assigned to `ctrl+alt+l`
 
 -----------------------------------------------------------------------------------------------------------
 
+## Source
+
+[https://github.com/mycelo1/vsc-equalize/issues](https://github.com/mycelo1/vsc-equalize/issues)
+
+-----------------------------------------------------------------------------------------------------------
+
+## Support, issues and bug reports
+
+[Create an issue](https://github.com/mycelo1/vsc-equalize/issues)
+
+-----------------------------------------------------------------------------------------------------------
+
 ## Release Notes
 
 ### 1.0.0
 
 Initial release.
+
+### 1.0.1
+
+* Fixed screenshots
+* Added Github repository
