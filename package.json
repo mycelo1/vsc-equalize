@@ -1,0 +1,42 @@
+{
+    "name": "equalize",
+    "displayName": "equalize",
+    "description": "Append spaces to make all lines of selection with same length",
+    "version": "1.0.0",
+    "publisher": "mycelo",
+    "icon": "images/equalize.png",
+    "license": "MIT",
+    "engines": {
+        "vscode": "^1.5.0"
+    },
+    "categories": [
+        "Other"
+    ],
+    "activationEvents": [
+        "onCommand:extension.equalize"
+    ],
+    "main": "./out/src/extension",
+    "contributes": {
+        "commands": [
+            {
+                "command": "extension.equalize",
+                "title": "Equalize"
+            }
+        ],
+        "keybindings": [
+            {
+                "command": "extension.equalize",
+                "key": "ctrl+alt+l"
+            }
+        ]
+    },
+    "scripts": {
+        "vscode:prepublish": "node ./node_modules/vscode/bin/compile",
+        "compile": "node ./node_modules/vscode/bin/compile -watch -p ./",
+        "postinstall": "node ./node_modules/vscode/bin/install"
+    },
+    "devDependencies": {
+        "typescript": "^1.8.5",
+        "vscode": "^0.11.0"
+    }
+}
