@@ -60,3 +60,7 @@ Initial release.
 
 * Fixed screenshots
 * Added Github repository
+
+### 1.1.0
+
+* Support for tab character

@@ -7,6 +7,7 @@ export function activate(context: vscode.ExtensionContext) {
     const disposable = vscode.commands.registerTextEditorCommand('extension.equalize', (textEditor, edit) => {
 
         const document = textEditor.document;
+        const tabSize = Number(textEditor.options.tabSize);
 
         textEditor.edit(editBuilder => {
 
@@ -18,17 +19,44 @@ export function activate(context: vscode.ExtensionContext) {
                 for (let lineIndex = selection.start.line; lineIndex <= selection.end.line; lineIndex++) {
 
                     const charactersInLine = document.lineAt(lineIndex).range.end.character - document.lineAt(lineIndex).range.start.character;
+                    const lineText = document.lineAt(lineIndex).text;
                     const documentPos = document.lineAt(lineIndex).range.end;
 
                     if ((charactersInLine > 0) || (lineIndex < selection.end.line)) {
 
-                        if (charactersInLine > maxLineLength) {
-                            maxLineLength = charactersInLine;
+                        let lineColumns = 0;
+
+                        if (tabSize > 1) {
+
+                            let lineChar = 0;
+
+                            while (true) {
+
+                                let prevIndex = lineChar;
+                                lineChar = lineText.indexOf("\t", prevIndex);
+
+                                if (lineChar >= 0) {
+                                    lineColumns += lineChar - prevIndex;
+                                    lineColumns += tabSize - (lineColumns % tabSize);
+                                    lineChar++;
+                                }
+                                else {
+                                    lineColumns += lineText.length - prevIndex;
+                                    break;
+                                }
+                            }
+                        }
+                        else {
+                            lineColumns = charactersInLine;
+                        }
+
+                        if (lineColumns > maxLineLength) {
+                            maxLineLength = lineColumns;
                         }
 
                         arrLineLayout.push({
                             numLine: lineIndex + 1,
-                            length: charactersInLine,
+                            length: lineColumns,
                             lastCharPos: documentPos
                         })
                     }

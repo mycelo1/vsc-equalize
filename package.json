@@ -2,18 +2,18 @@
     "name": "equalize",
     "displayName": "equalize",
     "description": "Append spaces to make all lines of selection with same length",
-    "version": "1.0.1",
+    "version": "1.1.0",
     "publisher": "mycelo",
     "icon": "images/equalize.png",
     "license": "MIT",
     "bugs": {
-		"url": "https://github.com/mycelo1/vsc-equalize/issues"
-	},
-	"homepage": "https://github.com/mycelo1/vsc-equalize",
-	"repository": {
-		"type": "git",
-		"url": "https://github.com/mycelo1/vsc-equalize"
-	},
+        "url": "https://github.com/mycelo1/vsc-equalize/issues"
+    },
+    "homepage": "https://github.com/mycelo1/vsc-equalize",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/mycelo1/vsc-equalize"
+    },
     "engines": {
         "vscode": "^1.5.0"
     },
