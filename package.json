@@ -2,7 +2,7 @@
     "name": "equalize",
     "displayName": "equalize",
     "description": "Append spaces to make all lines of selection with same length",
-    "version": "1.1.0",
+    "version": "1.1.1",
     "publisher": "mycelo",
     "icon": "images/equalize.png",
     "license": "MIT",

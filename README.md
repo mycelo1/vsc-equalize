@@ -20,15 +20,7 @@ This is intended to make column/rectangle selections and operations more friendl
 
 -----------------------------------------------------------------------------------------------------------
 
-## Screenshots
-
-![equalized lines](https://cdn.rawgit.com/mycelo1/vsc-equalize/master/images/screenshot1.png)
-
-> Some lines have been 'equalized' and a perfectly square column of text could be selected among them.
-
-![equalized lines](https://cdn.rawgit.com/mycelo1/vsc-equalize/master/images/screenshot2.png)
-
-> A column of text was copied alongside another one mantaining the original alignment thanks to equalized lines.
+![equalizing lines](https://cdn.rawgit.com/mycelo1/vsc-equalize/master/images/capture1.gif)
 
 -----------------------------------------------------------------------------------------------------------
 
@@ -64,3 +56,8 @@ Initial release.
 ### 1.1.0
 
 * Support for tab character
+
+### 1.1.1
+
+* Added screen capture to README
+* New extension icon
