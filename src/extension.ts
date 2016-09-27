@@ -22,7 +22,7 @@ export function activate(context: vscode.ExtensionContext) {
                     const lineText = document.lineAt(lineIndex).text;
                     const documentPos = document.lineAt(lineIndex).range.end;
 
-                    if ((charactersInLine > 0) || (lineIndex < selection.end.line)) {
+                    if ((lineIndex < selection.end.line) || (document.lineAt(lineIndex).range.end.isBeforeOrEqual(selection.end) && (charactersInLine > 0))) {
 
                         let lineColumns = 0;
 

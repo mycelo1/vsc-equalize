@@ -61,3 +61,7 @@ Initial release.
 
 * Added screen capture to README
 * New extension icon
+
+### 1.1.2
+
+* Ignore the last line if not fully selected
