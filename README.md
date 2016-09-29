@@ -2,7 +2,7 @@
 
 Append spaces on blocks of lines to make them the same size.
 
------------------------------------------------------------------------------------------------------------
+---
 
 ## Features
 
@@ -10,29 +10,33 @@ Given one or more groups of selected lines, this command would find out the leng
 
 This is intended to make column/rectangle selections and operations more friendly.
 
------------------------------------------------------------------------------------------------------------
+---
 
 ## How to Use
 
-* Select some lines and hit `ctrl+alt+l`.
+* **EQUALIZE** -- Select lines and hit `ctrl+alt+l`. All selected lines would become the same length by adding spaces on the right.
 
-* Alternatively, open the command pallete with `ctrl+shift+p` and type **equalize**.
+* **UNEQUALIZE** -- Select equalized lines and hit `ctrl+alt+u`. Exceeding spaces on the right of the lines will be trimmed.
 
------------------------------------------------------------------------------------------------------------
+---
 
 ![equalizing lines](https://cdn.rawgit.com/mycelo1/vsc-equalize/master/images/capture1.gif)
 
------------------------------------------------------------------------------------------------------------
+---
 
 ## Extension Settings
 
-By default the command **'extension.equalize'** is assigned to `ctrl+alt+l`
+**Feature** | **Command** | **Shortcut Key**
+--- | --- | :---:
+**EQUALIZE** | *extension.equalize* | `ctrl+alt+l`
+**UNEQUALIZE** | *extension.unequalize* | `ctrl+alt+u`
+| |
 
------------------------------------------------------------------------------------------------------------
+---
 
 ## Source
 
-[https://github.com/mycelo1/vsc-equalize/issues](https://github.com/mycelo1/vsc-equalize/issues)
+[https://github.com/mycelo1/vsc-equalize](https://github.com/mycelo1/vsc-equalize)
 
 -----------------------------------------------------------------------------------------------------------
 
@@ -65,3 +69,7 @@ Initial release.
 ### 1.1.2
 
 * Ignore the last line if not fully selected
+
+### 1.2.0
+
+* Added **UNEQUALIZE** command

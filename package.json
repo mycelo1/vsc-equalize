@@ -2,7 +2,7 @@
     "name": "equalize",
     "displayName": "equalize",
     "description": "Append spaces to make all lines of selection with same length",
-    "version": "1.1.2",
+    "version": "1.2.0",
     "publisher": "mycelo",
     "icon": "images/equalize.png",
     "license": "MIT",
@@ -21,7 +21,8 @@
         "Other"
     ],
     "activationEvents": [
-        "onCommand:extension.equalize"
+        "onCommand:extension.equalize",
+        "onCommand:extension.unequalize"
     ],
     "main": "./out/src/extension",
     "contributes": {
@@ -29,12 +30,22 @@
             {
                 "command": "extension.equalize",
                 "title": "Equalize"
+            },
+            {
+                "command": "extension.unequalize",
+                "title": "Unequalize"
             }
         ],
         "keybindings": [
             {
+                "key": "ctrl+alt+l",
                 "command": "extension.equalize",
-                "key": "ctrl+alt+l"
+                "when": "editorHasSelection && editorTextFocus"
+            },
+            {
+                "key": "ctrl+alt+u",
+                "command": "extension.unequalize",
+                "when": "editorHasSelection && editorTextFocus"
             }
         ]
     },
